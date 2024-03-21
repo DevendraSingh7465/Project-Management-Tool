@@ -32,28 +32,94 @@ body{
 #add-project-box{
     display:none;
     position: absolute;
-    display: none;
     z-index: 1;
-    height: 40%;
+    height: 26%;
     width: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
 }
+#add-project-box label{
+    margin-left: 70px;
+    font-size: 35px;
+}
+#add-project-box input{
+    height: 30px;
+    width: 70%;
+    margin-left: 70px;
+    background-color: #F5EAEA;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+#add-project-box button{
+    height: 30px;
+    padding: 5px 15px 5px 15px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+
+}
+.create_btn_{
+    background-color:#27CC9A;
+    margin-left: 2.1%;
+}
+.create_btn_:hover{
+    color:#27CC9A;
+    background-color: white;
+    transition: 300ms;
+
+}
+.cancel_btn_{
+    margin-left: 51.2%;
+
+}
+.cancel_btn_:hover{
+    background-color: black;    
+    color: white;
+    transition: 300ms;
+}
+
 #add-task-box{
     display:none;
     position: absolute;
-    display: none;
     z-index: 1;
-    height: 40%;
+    height: 26%;
     width: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
+}
+#add-task-box label{
+    margin-left: 70px;
+    font-size: 35px;
+}
+#add-task-box input{
+    height: 30px;
+    width: 70%;
+    margin-left: 70px;
+    background-color: #F5EAEA;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+#add-task-box button{
+    height: 30px;
+    padding: 5px 15px 5px 15px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+
 }
 .left-box{
     /* border: 1px solid black; */
@@ -191,10 +257,7 @@ table{
     color: white;
 }
 
-#allTasksList {
-    /* display: flex;
-    flex-direction: column; */
-}
+
 
 .table-btn12{
     background-color: transparent;
