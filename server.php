@@ -1,8 +1,6 @@
 <?php 
 	include("connection.php");
- ?>
-<table class="table">	
-<?php 
+
  	$all_project_names = array();
 	$query = mysqli_query($conn, "SELECT DISTINCT projects from notes");
 	while($row = mysqli_fetch_array($query)){
@@ -11,23 +9,12 @@
 	} 
 	foreach ($all_project_names as $index => $record) {
         $button_id = 'table-btn' . $index;
- ?>
-		<!-- <span id='bullet-points'>►</span> -->
-	<tbody class="table-body">
-		<tr class="table-row">
-			<td class="table-data">
-				<?php 
-					echo "
-					<div id='buttons-container'>
-						<button id='$button_id' class='table-btn' onclick='xyz()'>
-							$record
-						</button>
-					</div>";
-				?>
-			</td>
-		</tr>
-	</tbody>
-<?php 	
+		echo "
+		<div id='buttons-container'>
+			<button id='$button_id' class='table-btn' onclick='xyz()'>
+				$record
+			</button>
+		</div>";		
 	}
 ?>
-</table>
+
