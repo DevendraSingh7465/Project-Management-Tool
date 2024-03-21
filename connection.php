@@ -1,12 +1,13 @@
+<!-- this is the main connection file -->
 <?php 
 	$servername = "localhost:3308";
 	$username  = "root";
 	$password = "";
 	$dbname = "pmt";
 
-	$db = mysqli_connect($servername, $username, $password, $dbname);
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-	if (!$db) {
+	if (!$conn) {
 		die("Connection Failed". mysqli_connect_error());
 	}
  ?>
