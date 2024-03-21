@@ -1,12 +1,10 @@
 <?php 
 	include("connection.php");
  ?>
-<table class="table">
-			
+<table class="table">	
 <?php 
  	$all_project_names = array();
-	// SELECT DISTINCT projects from notes;
-	$query = mysqli_query($db, "SELECT DISTINCT projects from notes");
+	$query = mysqli_query($conn, "SELECT DISTINCT projects from notes");
 	while($row = mysqli_fetch_array($query)){
 		$projectname = $row['projects'];
 		array_push($all_project_names,$projectname);
@@ -28,11 +26,8 @@
 				?>
 			</td>
 		</tr>
-		
 	</tbody>
-
 <?php 	
 	}
 ?>
-
 </table>
