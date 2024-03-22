@@ -13,13 +13,20 @@ if($status_check==0){
         // header("Location:index.php");
     } 
 }
-else{
+else if($status_check==2){
     $sql = "UPDATE notes SET status='1' WHERE projects='$project_name' and tasks='$task_name'";
     if (mysqli_query($conn, $sql)) {
         // header("Location:index.php");
     } 
 }
+else if($status_check==3){
+    $sql = "DELETE FROM notes WHERE projects='$project_name'";
+    if (mysqli_query($conn, $sql)) {
+        header("Location:index.php");
+    } 
+}
 
+//  this code sends data to showtasksrelatedtoproject() function whose status=1
 $TaskStatus = array();
 $sql1 = "select tasks from notes where projects='$project_name' and status = '1'";
 $query1 = mysqli_query($conn,$sql1);
