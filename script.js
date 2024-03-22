@@ -28,6 +28,28 @@ function close_add_task_box() {
   add_task_box.style.display = "none";
 }
 
+// This function is used to delete the project from app
+function logButtonId(event) {
+  let delete_btn_id = event.target.id;
+  let last_digit_of_id = delete_btn_id.substring(10);
+  let project_id_guess = 'table-btn'+last_digit_of_id;
+  let project_name = document.getElementById(project_id_guess).innerText;
+  let text = "Are you sure you want to delete '"+ project_name+"'.";
+  if (confirm(text) == true) {
+    $.post(
+      "status.php",
+      {
+        postProjectName: project_name,
+        statusCheck: 3,
+      }, // 3 - delete project
+      function (data) {
+        $().html(data);
+      }
+    );
+    location.reload();
+  }
+}
+
 // this function sends the project name to server2.php to fetch all the tasks related to it.
 function showtasksrelatedtoproject() {
   try {
@@ -63,8 +85,8 @@ function showtasksrelatedtoproject() {
           }
         }
       );
-    } catch (err) {}
-  } catch (err) {}
+    } catch (err) { }
+  } catch (err) { }
 }
 
 // this functions works on the click of any project
@@ -129,3 +151,4 @@ function status_check() {
     });
   });
 }
+
