@@ -28,8 +28,10 @@ function close_add_task_box() {
   add_task_box.style.display = "none";
 }
 
+
+
 // This function is used to delete the project from app
-function logButtonId(event) {
+function delete_operation(event) {
   let delete_btn_id = event.target.id;
   let last_digit_of_id = delete_btn_id.substring(10);
   let project_id_guess = 'table-btn'+last_digit_of_id;
@@ -40,8 +42,32 @@ function logButtonId(event) {
       "status.php",
       {
         postProjectName: project_name,
-        statusCheck: 3,
+        statusCheck: 2,
       }, // 3 - delete project
+      function (data) {
+        $().html(data);
+      }
+    );
+    location.reload();
+  }
+}
+
+// This function is used to update the project name
+function update_operation(button){
+  let update_btn_id = button.id;
+  let last_digit_of_id = update_btn_id.substring(10);
+  let project_id_guess = 'table-btn'+last_digit_of_id;
+  let project_name = document.getElementById(project_id_guess).innerText;
+  let placeholder_project_name = project_name+' updated';
+  let new_project_name = prompt("Please enter new Project Name.", placeholder_project_name);
+  if (new_project_name != null) {
+    $.post(
+      "status.php",
+      {
+        postProjectName: project_name,
+        postUpdatedProjectName: new_project_name,
+        statusCheck: 3,
+      }, // 4 - update project name
       function (data) {
         $().html(data);
       }
