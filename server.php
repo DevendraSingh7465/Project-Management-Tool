@@ -10,11 +10,12 @@
 	foreach ($all_project_names as $index => $record) {
         $project_button_id = 'table-btn' . $index;
 		$delete_button_id = 'delete-btn'.$index;
+		$update_button_id = 'update-btn'.$index;
 		echo " 
 		<div id='buttons-container'>
 			<button id='$project_button_id' class='table-btn' onclick='xyz()'>
 				$record
-				<button id='$delete_button_id' class='delete-button' onclick='logButtonId(event)'>
+				<button id='$delete_button_id' class='delete-button' onclick='delete_operation(event)'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
@@ -52,6 +53,9 @@
 						</defs>
 					</svg>
 				</button>
+				<button id='$update_button_id' class='update-button' onclick='update_operation(this)'>
+					<img src= 'icons/black-update-btn.png'>
+                </button>
 			</button>
 		</div>";		
 	}
