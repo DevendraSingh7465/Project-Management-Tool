@@ -2,7 +2,6 @@
 include("connection.php");
 error_reporting(E_ERROR | E_PARSE);
 
-//get data from status_check() function
 $project_name = $_POST['postProjectName'];
 $task_name = $_POST['postTaskName'];
 $status_check = $_POST['statusCheck'];
@@ -33,6 +32,13 @@ else if($status_check==3){
     if (mysqli_query($conn, $sql)) {
         header("Location:index.php");
     }
+}
+// Create Task in project
+else if($status_check==4){
+    $sql = "INSERT INTO notes (projects,tasks) VALUES ('$project_name','$task_name');";
+    if (mysqli_query($conn, $sql)) {
+        header("Location:index.php");
+    } 
 }
 
 //  this code sends data to showtasksrelatedtoproject() function whose status=1
