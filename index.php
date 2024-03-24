@@ -11,7 +11,7 @@
 	<script src="jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <div class="outer">
+    <div class="outer" id="outer">
         <div class="add-project-box" id="add-project-box">
             <form method="post" action="create_project.php" onsubmit="return validateForm()" name="createprojectform">
                 <label for="input_project_name">Create Project</label><br />
@@ -26,14 +26,14 @@
             <button onclick="close_add_task_box()" type="reset" class="cancel_btn_">CANCEL</button>
             <button  onclick="postProjectName()" class="create_btn_">CREATE</button>
         </div>
-        <div class="left-box">
+        <div class="left-box" id="left-box">
             <h1>PROJECTS</h1>
             <div class="all-projects">
                 <div id="link_wrapper"></div>
             </div>
             <button id="myBtn" class="create-project-btn" onclick="create_project()">CREATE PROJECT</button>
         </div>
-        <div class="right-box">
+        <div class="right-box" id="right-box">
             <h1>TASKS</h1>
             <div class="all-tasks">
                 <div id="link_wrapper1"></div>
