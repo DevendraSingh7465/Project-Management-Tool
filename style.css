@@ -19,7 +19,9 @@ body {
   /* border: 1px solid #27CC9A; */
 }
 .outer {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   height: 80vh;
   width: 70%;
   position: absolute;
@@ -173,7 +175,9 @@ body {
   margin: 0 auto;
   overflow: hidden;
   overflow-y: scroll;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   height: 57vh;
   width: 95%;
 }
@@ -195,7 +199,6 @@ body {
 }
 .create-task-btn:hover .plus {
   content: url("icons/cyan-plus.png");
-  /* transition: 300ms; */
 }
 .create-task-btn:hover::after {
   content: "NEW TASK";
@@ -217,10 +220,6 @@ body {
   text-align: center;
 }
 
-/* table{
-    height: 100%;    
-    width: 100%;    
-} */
 #bullet-points {
   color: black;
 }
@@ -424,14 +423,13 @@ body {
   display: inline-block;
 }
 
-
 /* Update Button */
-.update-button{
+.update-button {
   position: absolute;
   right: 35px;
   top: 0;
-  transition: opacity 0.3s; 
-  
+  transition: opacity 0.3s;
+
   border-radius: 50%;
   background-color: transparent;
   height: 22px;
@@ -442,12 +440,11 @@ body {
   align-items: center;
   display: none;
 }
-.update-button img{
+.update-button img {
   height: 22px;
   width: 22px;
-  
 }
-.update-button:hover img{
+.update-button:hover img {
   cursor: pointer;
   content: url("icons/yellow-update-btn.png");
 }
