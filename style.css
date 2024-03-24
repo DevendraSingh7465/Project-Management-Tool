@@ -19,11 +19,9 @@ body {
   /* border: 1px solid #27CC9A; */
 }
 .outer {
-  /* border: 1px solid black; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   height: 80vh;
-  width: 70%;
+  width: 20%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,7 +34,6 @@ body {
   z-index: 1;
   height: 26%;
   width: 50%;
-  /* border: 1px solid black; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   top: 50%;
   left: 50%;
@@ -89,7 +86,6 @@ body {
   z-index: 1;
   height: 26%;
   width: 50%;
-  /* border: 1px solid black; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   top: 50%;
   left: 50%;
@@ -119,8 +115,7 @@ body {
   transition: 300ms;
 }
 .left-box {
-  /* border: 1px solid black; */
-  width: 30%;
+  width: 100%;
   position: relative;
   background-color: white;
 }
@@ -133,7 +128,6 @@ body {
   margin: 0 auto;
   border-top: 1px solid rgb(0, 0, 0, 0.1);
   border-bottom: 1px solid rgb(0, 0, 0, 0.1);
-
   height: 57vh;
   width: 95%;
   overflow: hidden;
@@ -162,7 +156,7 @@ body {
 }
 
 .right-box {
-  /* border: 1px solid black; */
+  display: none;
   width: 70%;
   background-color: rgb(230, 230, 230);
 }
@@ -175,9 +169,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   overflow-y: scroll;
-  /* border: 1px solid black; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   height: 57vh;
   width: 95%;
 }
@@ -255,7 +247,7 @@ body {
   color: white;
   cursor: pointer;
 }
-/* checkbox settings 👇 */
+/* checkbox settings */
 
 .ui-checkbox {
   --primary-color: #27cc9a;
@@ -295,7 +287,6 @@ body {
   cursor: pointer;
   position: relative;
 }
-
 .ui-checkbox::after {
   content: "";
   position: absolute;
@@ -312,7 +303,6 @@ body {
   -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
   transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
 }
-
 .ui-checkbox::before {
   top: 40%;
   left: 50%;
@@ -331,18 +321,13 @@ body {
   -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
   transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
 }
-
-/* actions */
-
 .ui-checkbox:hover {
   border-color: var(--primary-color);
 }
-
 .ui-checkbox:checked {
   background: var(--primary-color);
   border-color: transparent;
 }
-
 .ui-checkbox:checked::before {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) rotate(45deg)
@@ -354,7 +339,6 @@ body {
   -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 }
-
 .ui-checkbox:active:not(:checked)::after {
   -webkit-transition: none;
   -o-transition: none;
@@ -363,6 +347,7 @@ body {
   transition: none;
   opacity: 1;
 }
+
 
 /* Delete Button CSS  */
 
