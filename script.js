@@ -116,11 +116,25 @@ function showtasksrelatedtoproject() {
   } catch (err) {}
 }
 
+// This function gives the transition when we click on project in starting
+function Show_tasks_area() {
+  var outer_div = document.getElementById('outer');
+  var left_box_div = document.getElementById('left-box');
+  var right_box_div = document.getElementById('right-box');
+
+  outer_div.style.width = '70%';
+  outer_div.style.transition = 'ease-in 700ms';
+  left_box_div.style.width = '30%';
+  right_box_div.style.display = 'block';
+
+}
+
 // this functions works on the click of any project
 function xyz() {
   document.querySelectorAll(".table-btn").forEach(function (button) {
     button.addEventListener("click", function (event) {
       buttonId = event.target.id;
+      Show_tasks_area();
       showCreateTask();
       showtasksrelatedtoproject();
     });
