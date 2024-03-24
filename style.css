@@ -1,378 +1,456 @@
-body{
-    margin: 0;
-    background-color:rgb(39, 204, 154,0.5);
-    
+body {
+  margin: 0;
+  background-color: rgb(39, 204, 154, 0.5);
 }
 ::-webkit-scrollbar {
-    width: 0.5em;
-    background-color: transparent;
-  }
+  width: 0.5em;
+  background-color: transparent;
+}
 
 /* Make scrollbar visible when needed */
 ::-webkit-scrollbar-thumb {
-    background-color: #27CC9A;
-    border-radius: 20px;
+  background-color: #27cc9a;
+  border-radius: 20px;
 }
 
 /* Make scrollbar track visible when needed */
 ::-webkit-scrollbar-track {
-    background-color: transparent;
-    /* border: 1px solid #27CC9A; */
+  background-color: transparent;
+  /* border: 1px solid #27CC9A; */
 }
-.outer{
-    border: 1px solid black;
-    height: 80vh;
-    width: 70%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
+.outer {
+  border: 1px solid black;
+  height: 80vh;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
 }
-#add-project-box{
-    display:none;
-    position: absolute;
-    z-index: 1;
-    height: 26%;
-    width: 50%;
-    /* border: 1px solid black; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+#add-project-box {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  height: 26%;
+  width: 50%;
+  /* border: 1px solid black; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
 }
-#add-project-box label{
-    margin-left: 70px;
-    font-size: 35px;
+#add-project-box label {
+  margin-left: 70px;
+  font-size: 35px;
 }
-#add-project-box input{
-    height: 30px;
-    width: 70%;
-    margin-left: 70px;
-    background-color: #F5EAEA;
-    border: none;
-    outline: none;
-    padding-left: 10px;
-    margin-top: 10px;
+#add-project-box input {
+  height: 30px;
+  width: 70%;
+  margin-left: 70px;
+  background-color: #f5eaea;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  margin-top: 10px;
 }
-#add-project-box button{
-    height: 30px;
-    padding: 5px 15px 5px 15px;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-    transition: 300ms;
-
+#add-project-box button {
+  height: 30px;
+  padding: 5px 15px 5px 15px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 300ms;
 }
-.create_btn_{
-    background-color:#27CC9A;
-    margin-left: 2.1%;
+.create_btn_ {
+  background-color: #27cc9a;
+  margin-left: 2.1%;
 }
-.create_btn_:hover{
-    color:#27CC9A;
-    background-color: white;
-    transition: 300ms;
-
+.create_btn_:hover {
+  color: #27cc9a;
+  background-color: white;
+  transition: 300ms;
 }
-.cancel_btn_{
-    margin-left: 51.2%;
-
+.cancel_btn_ {
+  margin-left: 51.2%;
 }
-.cancel_btn_:hover{
-    background-color: black;    
-    color: white;
-    transition: 300ms;
+.cancel_btn_:hover {
+  background-color: black;
+  color: white;
+  transition: 300ms;
 }
 
-#add-task-box{
-    display:none;
-    position: absolute;
-    z-index: 1;
-    height: 26%;
-    width: 50%;
-    /* border: 1px solid black; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+#add-task-box {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  height: 26%;
+  width: 50%;
+  /* border: 1px solid black; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
 }
-#add-task-box label{
-    margin-left: 70px;
-    font-size: 35px;
+#add-task-box label {
+  margin-left: 70px;
+  font-size: 35px;
 }
-#add-task-box input{
-    height: 30px;
-    width: 70%;
-    margin-left: 70px;
-    background-color: #F5EAEA;
-    border: none;
-    outline: none;
-    padding-left: 10px;
-    margin-top: 10px;
+#add-task-box input {
+  height: 30px;
+  width: 70%;
+  margin-left: 70px;
+  background-color: #f5eaea;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  margin-top: 10px;
 }
-#add-task-box button{
-    height: 30px;
-    padding: 5px 15px 5px 15px;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-    transition: 300ms;
+#add-task-box button {
+  height: 30px;
+  padding: 5px 15px 5px 15px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 300ms;
+}
+.left-box {
+  /* border: 1px solid black; */
+  width: 30%;
+  position: relative;
+  background-color: white;
+}
+.left-box h1 {
+  color: #27cc9a;
+  text-align: center;
+}
+.all-projects {
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid rgb(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
 
+  height: 57vh;
+  width: 95%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
-.left-box{
-    /* border: 1px solid black; */
-    width: 30%;
-    position: relative;
-    background-color: white;
+.create-project-btn {
+  border: none;
+  color: white;
+  background-color: #27cc9a;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  font-weight: 500;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3vh;
+  width: 200px;
+  transition: 300ms;
 }
-.left-box h1{
-    color:#27CC9A;
-    text-align: center;
-
-}
-.all-projects{
-    display: block;
-    margin: 0 auto;
-    border-top: 1px solid rgb(0, 0, 0,0.1);
-    border-bottom: 1px solid rgb(0, 0, 0,0.1);
-
-
-    height: 57vh;
-    width: 95%;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-.create-project-btn{
-    border: none;
-    color: white;
-    background-color:#27CC9A;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px;
-    font-weight: 500;
-    display: block;
-    margin: 0 auto;
-    margin-top: 3vh;
-    width: 200px;
-    transition: 300ms;
-
-}
-.create-project-btn:hover{
-    background-color: white;
-    border: 1px solid rgb(0, 0, 0,0.1);
-    transition: 300ms;
-    color: #27CC9A;
-    cursor: pointer;
+.create-project-btn:hover {
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  transition: 300ms;
+  color: #27cc9a;
+  cursor: pointer;
 }
 
+.right-box {
+  /* border: 1px solid black; */
+  width: 70%;
+  background-color: rgb(230, 230, 230);
+}
+.right-box h1 {
+  text-align: center;
+  color: #27cc9a;
+}
+.all-tasks {
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid black;
+  height: 57vh;
+  width: 95%;
+}
+.create-task-btn {
+  display: none;
 
-.right-box{
-    /* border: 1px solid black; */
-    width: 70%;
-    background-color: rgb(230, 230, 230);
-
+  border: none;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background-color: #27cc9a;
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+  transition: 500ms;
 }
-.right-box h1{
-    text-align: center;
-    color: #27CC9A;
+.plus {
+  height: 46px;
 }
-.all-tasks{
-    display: block;
-    margin: 0 auto;
-    overflow: hidden;
-    overflow-y: scroll;
-    border: 1px solid black;
-    height: 57vh;
-    width: 95%;
+.create-task-btn:hover .plus {
+  content: url("icons/cyan-plus.png");
+  /* transition: 300ms; */
 }
-.create-task-btn{
-    display: none;
-
-    border: none;
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
-    background-color:#27CC9A;
-    float: right;
-    margin-right: 10px;
-    margin-top: 5px;
-    transition: 500ms;
+.create-task-btn:hover::after {
+  content: "NEW TASK";
+  font-size: 20px;
+  display: block;
+  color: #27cc9a;
+  transition: 300ms;
 }
-.plus{
-    height: 46px;
-}
-.create-task-btn:hover .plus{
-    content: url("cyan-plus.png");
-    /* transition: 300ms; */
-
-}
-.create-task-btn:hover::after{
-    content: "NEW TASK";
-    font-size: 20px;
-    display: block;
-    color:#27CC9A;
-    transition: 300ms;
-    
-
-}
-.create-task-btn:hover{
-    border-radius: 12px;
-    display: flex;
-    width: 20%;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: 1px solid rgb(0, 0, 0,0.1);
-    cursor: pointer;
-    transition: 500ms;
-    text-align: center;
-
+.create-task-btn:hover {
+  border-radius: 12px;
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 500ms;
+  text-align: center;
 }
 
-
-table{
+/* table{
     height: 100%;    
     width: 100%;    
+} */
+#bullet-points {
+  color: black;
 }
-#bullet-points{
-    color: black;
+.table-btn {
+  background-color: white;
+  border: none;
+  color: #27cc9a;
+  width: 100%;
+  font-size: 20px;
+  text-align: left;
 }
-.table-btn{
-    background-color: white;
-    border: none;
-    color: #27CC9A;
-    width: 100%;
-    font-size: 20px;
-    text-align: left;
+.table-btn:hover {
+  background-color: #27cc9a;
+  color: white;
+  cursor: pointer;
 }
-.table-btn:hover{
-    background-color: #27CC9A;
-    color: white;
-    cursor: pointer;
-}
-.table-btn:focus{
-    background-color: #27CC9A;
-    color: white;
+.table-btn:focus {
+  background-color: #27cc9a;
+  color: white;
 }
 
-
-
-.table-btn12{
-    background-color: transparent;
-    padding: 2px 0 2px 5px;
-    border: none;
-    color: #27CC9A;
-    width: 100%;
-    font-size: 24px;
-    text-align: left;
+.table-btn12 {
+  background-color: transparent;
+  padding: 2px 0 2px 5px;
+  border: none;
+  color: #27cc9a;
+  width: 100%;
+  font-size: 24px;
+  text-align: left;
 }
-.table-btn12:hover{
-    background-color: #27CC9A;
-    color: white;
-    cursor: pointer;
+.table-btn12:hover {
+  background-color: #27cc9a;
+  color: white;
+  cursor: pointer;
 }
 /* checkbox settings 👇 */
 
 .ui-checkbox {
-    --primary-color: #27CC9A;
-    --secondary-color: #fff;
-    --primary-hover-color: #27CC9A;
-    /* checkbox */
-    --checkbox-diameter: 20px;
-    --checkbox-border-radius: 5px;
-    --checkbox-border-color: #d9d9d9;
-    --checkbox-border-width: 1px;
-    --checkbox-border-style: solid;
-    /* checkmark */
-    --checkmark-size: 1.2;
-  }
+  --primary-color: #27cc9a;
+  --secondary-color: #fff;
+  --primary-hover-color: #27cc9a;
+  /* checkbox */
+  --checkbox-diameter: 20px;
+  --checkbox-border-radius: 5px;
+  --checkbox-border-color: #d9d9d9;
+  --checkbox-border-width: 1px;
+  --checkbox-border-style: solid;
+  /* checkmark */
+  --checkmark-size: 1.2;
+}
+
+.ui-checkbox,
+.ui-checkbox *,
+.ui-checkbox *::before,
+.ui-checkbox *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ui-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--checkbox-diameter);
+  height: var(--checkbox-diameter);
+  border-radius: var(--checkbox-border-radius);
+  background: var(--secondary-color);
+  border: var(--checkbox-border-width) var(--checkbox-border-style)
+    var(--checkbox-border-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.ui-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5)
+    var(--primary-color);
+  box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+
+.ui-checkbox::before {
+  top: 40%;
+  left: 50%;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  border-right: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+    opacity 0.1s;
+  -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+}
+
+/* actions */
+
+.ui-checkbox:hover {
+  border-color: var(--primary-color);
+}
+
+.ui-checkbox:checked {
+  background: var(--primary-color);
+  border-color: transparent;
+}
+
+.ui-checkbox:checked::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg)
+    scale(var(--checkmark-size));
+  -ms-transform: translate(-50%, -50%) rotate(45deg)
+    scale(var(--checkmark-size));
+  transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.ui-checkbox:active:not(:checked)::after {
+  -webkit-transition: none;
+  -o-transition: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: none;
+  opacity: 1;
+}
+
+/* Delete Button CSS  */
+
+.delete-button {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  gap: 2px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.delete-button:hover {
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+  gap: 0;
+}
+
+.bin-top {
+  transform-origin: bottom right;
+}
+.delete-button:hover .bin-top {
+  transition-duration: 0.5s;
+  transform: rotate(160deg);
+}
+#buttons-container {
+  position: relative;
+}
+
+.delete-button {
+  position: absolute;
+  right: 3px;
+  top: 1px;
+  transition: opacity 0.3s;
+  display: none;
+}
+#buttons-container:hover .delete-button {
+  display: inline-block;
+}
+
+
+/* Update Button */
+.update-button{
+  position: absolute;
+  right: 35px;
+  top: 0;
+  transition: opacity 0.3s; 
   
-  .ui-checkbox, 
-  .ui-checkbox *, 
-  .ui-checkbox *::before, 
-  .ui-checkbox *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+  border-radius: 50%;
+  background-color: transparent;
+  height: 22px;
+  width: 22px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.update-button img{
+  height: 22px;
+  width: 22px;
   
-  .ui-checkbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: var(--checkbox-diameter);
-    height: var(--checkbox-diameter);
-    border-radius: var(--checkbox-border-radius);
-    background: var(--secondary-color);
-    border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .ui-checkbox::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
-    box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
-    border-radius: inherit;
-    opacity: 0;
-    -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
-    -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
-    transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
-  }
-  
-  .ui-checkbox::before {
-    top: 40%;
-    left: 50%;
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 7px;
-    border-right: 2px solid var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
-    -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
-    transform: translate(-50%, -50%) rotate(45deg) scale(0);
-    opacity: 0;
-    -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
-    -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
-    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
-  }
-  
-  /* actions */
-  
-  .ui-checkbox:hover {
-    border-color: var(--primary-color);
-  }
-  
-  .ui-checkbox:checked {
-    background: var(--primary-color);
-    border-color: transparent;
-  }
-  
-  .ui-checkbox:checked::before {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
-    -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
-    transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
-    -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-    -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-  }
-  
-  .ui-checkbox:active:not(:checked)::after {
-    -webkit-transition: none;
-    -o-transition: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    transition: none;
-    opacity: 1;
-  }
+}
+.update-button:hover img{
+  cursor: pointer;
+  content: url("icons/yellow-update-btn.png");
+}
+#buttons-container:hover .update-button {
+  display: inline-block;
+}

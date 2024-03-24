@@ -39,7 +39,7 @@
                 <div id="link_wrapper1"></div>
             </div>
             <button class="create-task-btn" id="create-task-btn" onclick="Create_task_()">
-                <img class="plus" src="white-plus.png" alt="">
+                <img class="plus" src="icons/white-plus.png" alt="">
             </button>
         </div>
     </div>
